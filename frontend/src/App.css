@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+  --main-bg-color: #D5D5D5;
+  --main-border-color: rgba(128, 125, 125, 0.363);
+  --main-blue: #0072CE;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--main-bg-color);
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movies{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+.movie_container{
+  width: 25%;
+  position: relative;
+  overflow: hidden;
+}
+.movie_container img:hover{
+  transform: scale(1.05);
+  filter: grayscale(80%);
+
+}
+.movie_description{
+  position: absolute;
+  padding: 30px 20px;
+  bottom: 0;
   color: white;
+  box-shadow: 0px -75px 56px 23px rgba(0,0,0,0.5) inset;
+  -webkit-box-shadow: 0px -75px 56px 23px rgba(0,0,0,0.5) inset;
+  -moz-box-shadow: 0px -75px 56px 23px rgba(0,0,0,0.5) inset;
+}
+.movie_date{
+  color: var(--main-blue);
+  word-spacing: 5px;
+}
+.movie_name{
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+.dashes{
+  display: flex;
+  margin-bottom: 17px;
+}
+.movie_button{
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: 2px solid white;
+  padding: 10px;
+  transition: .5s;
+}
+.movie_button:hover{
+  border: 2px solid var(--main-blue);
+  color: var(--main-blue);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie_container img{
+  width: 100%;
+  height: 100%;
+  transition: 1s;
 }

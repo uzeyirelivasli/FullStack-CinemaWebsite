@@ -1,0 +1,73 @@
+/* HEADER */
+header {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  background-color: var(--main-bg-color);
+}
+.bars_container {
+  position: relative;
+  font-size: 30px;
+  opacity: 0.9;
+  padding: 20px;
+  cursor: pointer;
+  color: #000912;
+  z-index: 0;
+  overflow: hidden;
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  height: 100%;
+}
+header ul li {
+  border-left: 1px solid var(--main-border-color);
+  font-size: 12px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.bars_container::before{
+  width: 150% !important;
+  left: -10%;
+}
+header ul li:before, .bars_container::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  top: 100%;
+  transition: 0.4s;
+  z-index: -1;
+}
+header ul li:hover::before, .bars_container:hover:before{
+  top: 0;
+}
+header ul li:hover > a, .bars_container:hover {
+  color: white;
+}
+
+header ul li a {
+  color: #000912;
+  padding: 25px;
+  display: block;
+  transition: 0.4s;
+  z-index: 1;
+}
+header ul li:last-child {
+  border-right: 1px solid var(--main-border-color);
+}
+.logo {
+  background-image: url("../images/imax_logo.png");
+  width: 106px;
+  height: 43px;
+  margin-left: 50px;
+}

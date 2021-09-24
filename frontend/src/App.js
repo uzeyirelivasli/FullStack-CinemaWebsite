@@ -3,6 +3,7 @@ import "./App.css";
 //
 import Header from "./Header/Header";
 import Slider from "./Slider/Slider";
+import VideoComponent from './VideoComponent/Video'
 
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
     <div className="App">
       <Header />
       <Slider />
+      <VideoComponent />
+      
     </div>
   );
 }

@@ -1,0 +1,103 @@
+.video_container {
+    width: 98%;
+    margin: 0 auto;
+    margin-bottom: 110px;
+    position: relative;
+    height: 570px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 48.8328%;
+  }
+  .video_description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 35%;
+    padding: 30px;
+    color: white;
+  }
+  .video_description * {
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+  }
+  .video_description_top {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .video_description_top h6 {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .video_description .video_logo {
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 90px;
+  }
+  .video_logo img {
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+  }
+  .video_name {
+    font-size: 82px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-bottom: 100px;
+  }
+  .video_description h5 {
+    margin-bottom: 15px;
+  }
+  .video_description h2 {
+    font-size: 34px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .video_description .video_watchnow {
+    font-weight: 600;
+  }
+  .video_start_button {
+    cursor: pointer;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--main-blue);
+  }
+  .video_start_button:hover::before {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  .video_start_button:hover:after {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  .video_start_button::before {
+    content: "";
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    left: 55%;
+    top: 55%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-blue);
+    clip-path: polygon(0 0, 0 100%, 100% 30%);
+    transition: 0.4s;
+  }
+  .video_start_button::after {
+    content: "";
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    z-index: 0;
+    clip-path: polygon(31% 0, 0 100%, 100% 70%);
+    transition: 0.4s;
+  }

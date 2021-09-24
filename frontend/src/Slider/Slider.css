@@ -1,0 +1,75 @@
+.slider {
+  width: 98%;
+  overflow: hidden;
+  transition: 1s;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.slider input {
+  display: none;
+}
+.movies {
+  display: flex;
+  width: 200%;
+  padding: 0px 10px;
+  margin: 0 auto;
+  position: relative;
+  transition: 1s;
+}
+.swiper,
+.navigation-auto {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  bottom: 10px;
+  justify-content: center;
+}
+.swiper_dot,
+.navigation-auto div {
+  margin-left: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.active_swiper {
+  background-color: var(--main-blue);
+}
+.navigation-auto div {
+  z-index: 999;
+}
+
+/* slide manually */
+#radio1:checked ~ .first_slide {
+  margin-left: 0;
+}
+#radio2:checked ~ .first_slide {
+  margin-left: -25.7vw;
+}
+#radio3:checked ~ .first_slide {
+  margin-left: -51vw;
+}
+#radio4:checked ~ .first_slide {
+  margin-left: -75.7vw;
+}
+#radio5:checked ~ .first_slide {
+  margin-left: -100.65vw;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: var(--main-blue);
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: var(--main-blue);
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: var(--main-blue);
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: var(--main-blue);
+}
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background-color: var(--main-blue);
+}

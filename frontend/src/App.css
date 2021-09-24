@@ -1,74 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 :root {
-  --main-bg-color: #D5D5D5;
+  --main-bg-color: #d5d5d5;
   --main-border-color: rgba(128, 125, 125, 0.363);
-  --main-blue: #0072CE;
+  --main-blue: #0072ce;
 }
-body{
+body {
   background-color: var(--main-bg-color);
-  overflow-x: hidden;
 }
-*{
-  font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
 }
-.movies{
-  display: flex;
-  width: 100%;
-  padding: 0px 10px;
+
+.slider {
+  width: 98%;
+  overflow: hidden;
+  transition: 1s;
   margin: 0 auto;
 }
-.movie_container{
-  width: 25%;
-  position: relative;
-  overflow: hidden;
+.slider input {
+  display: none;
 }
-.movie_container img:hover{
-  transform: scale(1.05);
-  filter: grayscale(80%);
-
-}
-.movie_description{
-  position: absolute;
-  padding: 30px 20px;
-  bottom: 0;
-  color: white;
-  box-shadow: 0px -75px 56px 23px rgba(0,0,0,0.5) inset;
-  -webkit-box-shadow: 0px -75px 56px 23px rgba(0,0,0,0.5) inset;
-  -moz-box-shadow: 0px -75px 56px 23px rgba(0,0,0,0.5) inset;
-}
-.movie_date{
-  color: var(--main-blue);
-  word-spacing: 5px;
-}
-.movie_name{
-  font-size: 30px;
-  letter-spacing: 3px;
-}
-.dashes{
+.movies {
   display: flex;
-  margin-bottom: 17px;
-}
-.movie_button{
-  font-size: 13px;
-  color: white;
-  font-weight: 600;
-  letter-spacing: 2px;
-  border: 2px solid white;
-  padding: 10px;
-  transition: .5s;
-}
-.movie_button:hover{
-  border: 2px solid var(--main-blue);
-  color: var(--main-blue);
-}
-
-.movie_container img{
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  padding: 0px 10px;
+  margin: 0 auto;
+  position: relative;
   transition: 1s;
+}
+.swiper {
+  position: absolute;
+  z-index: 999;
+  width: 50%;
+  display: flex;
+  bottom: 10px;
+  justify-content: center;
+}
+.swiper_dot {
+  margin-left: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.active_swiper {
+  background-color: var(--main-blue);
+}
+#radio1:checked ~ .first_slide {
+  margin-left: 0;
+}
+#radio2:checked ~ .first_slide {
+  margin-left: -25.7vw;
+}
+#radio3:checked ~ .first_slide {
+  margin-left: -51vw;
+}
+#radio4:checked ~ .first_slide {
+  margin-left: -75.7vw;
+}
+#radio5:checked ~ .first_slide {
+  margin-left: -100.65vw;
 }
